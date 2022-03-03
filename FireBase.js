@@ -1,9 +1,31 @@
+import * as firebase from "firebase";
+import "@firebase/auth";
+import "@firebase/firestore";
+//https://rnfirebase.io/
+//18.13 and 1.10
+// › Open in the web browser...
+// › Press ? │ show all commands
+// Web Bundling complete 7176ms
+// ./FireBase.js:1
+// Module not found: Can't resolve 'firebase'
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBhQtUxnA0dxgyZsnR0logV_D7Ibkjvu50",
-  authDomain: "vaillanthack.firebaseapp.com",
-  projectId: "vaillanthack",
-  storageBucket: "vaillanthack.appspot.com",
-  messagingSenderId: "344197341220",
-  appId: "1:344197341220:web:04fa81624ec7388a11b8b1",
-  measurementId: "G-QGBYWS5QGW"
+  apiKey: "AIzaSyDoTjAs8bsVXqE_XQJKcSbKUlet9nCks44",
+  authDomain: "signal-clone-yt-build-39d44.firebaseapp.com",
+  projectId: "signal-clone-yt-build-39d44",
+  storageBucket: "signal-clone-yt-build-39d44.appspot.com",
+  messagingSenderId: "485075696626",
+  appId: "1:485075696626:web:f758c709f66976365b096b"
 };
+
+let app;
+
+if (firebase.apps.length === 0) {
+  app = firebase.initializeApp(firebaseConfig);
+} else {
+  app = firebase.app();
+}
+
+const db = app.firestore();
+const auth = firebase.auth();
+export { db, auth };

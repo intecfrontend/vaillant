@@ -5,11 +5,11 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import "react-native-gesture-handler";
 import LoginScreen from "./screens/LoginScreen";
-import RegisterScreen from "./screens/LoginScreen";
+import RegisterScreen from "./screens/RegisterScreen";
 // import { createStackNavigator } from "react-navigation-stack";
 const Stack = createStackNavigator();
 const globalScreenOptions = {
-  headerStyle: { backgroundColor: "#2C6BED" },
+  headerStyle: { backgroundColor: "#00917e" },
   headerTitleStyle: { color: "white" },
   headerTintColor: "white"
 };
@@ -23,7 +23,7 @@ export default function App() {
           component={LoginScreen}
         />
         <Stack.Screen
-          options={{ title: "Let's Register" }}
+          options={{ title: "Back to Login" }}
           name="Register"
           component={RegisterScreen}
         />
